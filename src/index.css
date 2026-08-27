@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes goalPop {
+  0% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(4px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes corePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px 4px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes corePulseApex {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 20px 0 rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 0 40px 6px rgba(245, 158, 11, 0.7);
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    opacity: 0.3;
+    transform: var(--particle-transform) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: var(--particle-transform) scale(1.2);
+  }
+}
+
+@keyframes confettiBurst {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--cx), var(--cy)) scale(1);
+    opacity: 0;
+  }
+}
